@@ -23,6 +23,17 @@ document.getElementById("contact-form").onsubmit = () => {
     document.getElementById("linkedin-format-error").style.display = "block";
   }
 
+  let emailRegex = /.+@.+\..+/;
+  let mailingList = document.getElementById("mailing-list").checked;
+  let email = document.getElementById("email").value.trim();
+  if (email != "" && !emailRegex.test(email)) {
+    isValid = false;
+    document.getElementById("email-format-error").style.display = "block";
+  } else if (email == "" && mailingList) {
+    isValid = false;
+    document.getElementById("email-empty-error").style.display = "block";
+  }
+
   return isValid;
 };
 

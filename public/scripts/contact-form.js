@@ -18,7 +18,7 @@ document.getElementById("contact-form").onsubmit = () => {
 
   let linkedinRegex = /^https:\/\/(www\.|)linkedin\.com\/in\/.*/;
   let linkedin = document.getElementById("linkedin").value.trim();
-  if (!linkedinRegex.test(linkedin)) {
+  if (linkedin != "" && !linkedinRegex.test(linkedin)) {
     isValid = false;
     document.getElementById("linkedin-format-error").style.display = "block";
   }

@@ -1,0 +1,167 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(232, 230, 230);
+}
+
+form {
+  flex: 0 1 700px;
+  background-color: white;
+  box-shadow: lightgray 5px 5px 10px;
+  padding: 20px;
+  border-radius: 5px;
+  display: grid;
+  gap: 15px;  
+  grid-template-columns: 1fr;
+  grid-template-rows: 13fr;
+  grid-template-areas:
+    "title"
+    "first-name"
+    "last-name"
+    "job-title"
+    "company"
+    "linkedin"
+    "email"
+    "first-contact-method"
+    "other-contact-method"
+    "message"
+    "mailing-list"
+    "email-format"
+    "submit-button";
+  
+  @media screen and (min-width: 600px) {
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      "title title title title"
+      "first-name last-name last-name job-title"
+      "company linkedin linkedin email"
+      "first-contact-method first-contact-method other-contact-method other-contact-method"
+      "message message message message"
+      "mailing-list mailing-list mailing-list mailing-list"
+      "email-format email-format email-format email-format"
+      "submit-button submit-button submit-button submit-button";    
+  }
+}
+
+#title-group {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+#first-name-group {
+  grid-area: first-name;
+  display: flex;
+  flex-direction: column;
+}
+
+#last-name-group {
+  grid-area: last-name;
+  display: flex;
+  flex-direction: column;
+}
+
+#job-title-group {
+  grid-area: job-title;
+  display: flex;
+  flex-direction: column;
+}
+
+#company-group {
+  grid-area: company;
+  display: flex;
+  flex-direction: column;
+}
+
+#linkedin-group {
+  grid-area: linkedin;
+  display: flex;
+  flex-direction: column;
+}
+
+#email-group {
+  grid-area: email;
+  display: flex;
+  flex-direction: column;
+}
+
+#first-contact-method-group {
+  grid-area: first-contact-method;
+  display: flex;
+  flex-direction: column;
+}
+
+#other-contact-method-group {
+  grid-area: other-contact-method;
+  display: flex;
+  flex-direction: column;
+}
+
+#message-group {
+  grid-area: message;
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    resize: vertical;
+    min-height: 75px;
+  }
+}
+
+#mailing-list-group {
+  grid-area: mailing-list;
+  display: flex;
+}
+
+#email-format-group {
+  grid-area: email-format;
+  
+  fieldset {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  legend {
+    float: left;
+    padding: 0;
+  }
+
+  input {
+    margin: 0;
+  }
+}
+
+#submit-button-group {
+  grid-area: submit-button;
+
+  button {
+    color: white;
+    background-color: green;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+div, fieldset {
+  gap: 5px;
+}
+
+label, legend {
+  font-weight: bold;
+}
+
+input, select, textarea {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+}

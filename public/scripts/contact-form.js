@@ -16,6 +16,13 @@ document.getElementById("contact-form").onsubmit = () => {
     document.getElementById("last-name-empty-error").style.display = "block";
   }
 
+  let linkedinRegex = /^https:\/\/(www\.|)linkedin\.com\/in\/.*/;
+  let linkedin = document.getElementById("linkedin").value.trim();
+  if (!linkedinRegex.test(linkedin)) {
+    isValid = false;
+    document.getElementById("linkedin-format-error").style.display = "block";
+  }
+
   return isValid;
 };
 

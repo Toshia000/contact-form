@@ -16,11 +16,13 @@
     <div id="first-name-group">
       <label for="first-name">First Name</label>
       <input type="text" id="first-name" name="first-name">
+      <span id="first-name-empty-error" class="error">Required</span>
     </div>
 
     <div id="last-name-group">
       <label for="last-name">Last Name</label>
       <input type="text" id="last-name" name="last-name">
+      <span id="last-name-empty-error" class="error">Required</span>
     </div>
 
     <div id="job-title-group">
@@ -36,11 +38,14 @@
     <div id="linkedin-group">
       <label for="linkedin">LinkedIn URL</label>
       <input type="url" id="linkedin" name="linkedin">
+      <span id="linkedin-format-error" class="error">Must start with "https://linkedin.com/in/"</span>
     </div>
 
     <div id="email-group">
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email">
+      <span id="email-empty-error" class="error">Required if mailing list is selected</span>
+      <span id="email-format-error" class="error">Must contain @ and .</span>
     </div>
 
     <div id="first-contact-method-group">
@@ -51,6 +56,7 @@
         <option value="personal-website">Personal Website</option>
         <option value="linkedin">LinkedIn</option>
       </select>
+      <span id="first-contact-method-empty-error" class="error">Required</span>
     </div>
 
     <div id="other-contact-method-group">      

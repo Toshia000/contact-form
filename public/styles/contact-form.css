@@ -165,3 +165,8 @@ input, select, textarea {
   border-radius: 5px;
   padding: 5px;
 }
+
+.error {
+  color: red;
+  display: none;
+}

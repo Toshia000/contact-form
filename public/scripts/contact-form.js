@@ -43,6 +43,17 @@ document.getElementById("contact-form").onsubmit = () => {
   return isValid;
 };
 
+document.getElementById("mailing-list").onchange = () => {
+  let mailingList = document.getElementById("mailing-list").checked;
+  let emailFormatGroup = document.getElementById("email-format-group");
+
+  if (mailingList) {
+    emailFormatGroup.style.display = "block";
+  } else {
+    emailFormatGroup.style.display = "none";
+  }
+}
+
 function clearErrors() {
   let errors = document.getElementsByClassName("error");
 

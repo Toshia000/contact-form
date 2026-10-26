@@ -121,6 +121,7 @@ form {
 
 #email-format-group {
   grid-area: email-format;
+  display: none;
   
   fieldset {
     display: flex;

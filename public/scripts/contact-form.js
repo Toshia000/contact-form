@@ -34,6 +34,12 @@ document.getElementById("contact-form").onsubmit = () => {
     document.getElementById("email-empty-error").style.display = "block";
   }
 
+  let firstContactMethod = document.getElementById("first-contact-method").value.trim();
+  if (firstContactMethod == "") {
+    isValid = false;
+    document.getElementById("first-contact-method-empty-error").style.display = "block";
+  }
+
   return isValid;
 };
 

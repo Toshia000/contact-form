@@ -54,6 +54,18 @@ document.getElementById("mailing-list").onchange = () => {
   }
 }
 
+document.getElementById("first-contact-method").onchange = () => {
+  let firstContactMethod = document.getElementById("first-contact-method").value.trim();
+  let otherContactMethodGroup = document.getElementById("other-contact-method-group");
+
+  if (firstContactMethod == "other") {
+    otherContactMethodGroup.style.display = "flex";
+    otherContactMethodGroup.style.flexDirection = "column";
+  } else {
+    otherContactMethodGroup.style.display = "none";
+  }
+}
+
 function clearErrors() {
   let errors = document.getElementsByClassName("error");
 

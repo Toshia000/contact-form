@@ -99,8 +99,7 @@ form {
 
 #other-contact-method-group {
   grid-area: other-contact-method;
-  display: flex;
-  flex-direction: column;
+  display: none;
 }
 
 #message-group {

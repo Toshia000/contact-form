@@ -10,8 +10,10 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-  res.sendFile(`${import.meta.dirname}/views/contact-form.html`);
+  res.render('contact-form');
 });
 
 app.post('/submit-form', (req, res) => {
@@ -20,7 +22,7 @@ app.post('/submit-form', (req, res) => {
   contacts.push(contact);
   console.log(contact);
 
-  res.sendFile(`${import.meta.dirname}/views/form-confirmation.html`);
+  res.render('form-confirmation');
 });
 
 app.listen(PORT, () => {

@@ -13,6 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
+  res.render('resume');
+});
+
+app.get('/contact-form', (req, res) => {
   res.render('contact-form');
 });
 

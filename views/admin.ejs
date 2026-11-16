@@ -6,6 +6,8 @@
   <title>Admin</title>
 </head>
 <body>
+  <%- include('partials/navigation') %>
+
   <% contacts.forEach(contact => { %>
     <p>First name: <%= contact["first-name"] %></p>
     <p>Last name: <%= contact["last-name"] %></p>

@@ -41,21 +41,29 @@ body {
 
   @media (max-width: 800px) {
     grid-template-areas:
+      "site-navigation"
       "title"
-      "navigation"
+      "page-navigation"
       "content";
   }
 
   @media (min-width: 801px) {
     grid-template-areas:
+      ". site-navigation ."
       ". title ."
-      ". content navigation";
+      ". content page-navigation";
     grid-template-columns: minmax(0%, 30%) minmax(40%, 1000px) minmax(0%, 30%);
   }
 }
 
-nav {
-  grid-area: navigation;
+.site-navigation {
+  grid-area: site-navigation;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-navigation {
+  grid-area: page-navigation;
 
   @media (min-width: 801px) {
     max-height: max-content;

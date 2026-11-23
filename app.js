@@ -48,6 +48,9 @@ app.get('/admin', async(req, res) => {
 app.post('/submit-form', async(req, res) => {
   try {
     const contact = req.body;
+    contact['mailing-list'] = contact['mailing-list'] ? contact['mailing-list'] : 'off';
+    contact['email-format'] = contact['email-format'] ? contact['email-format'] : null;
+    contact['timestamp'] = new Date();
     console.log('New contact received: ', contact);
 
     const sql = `INSERT INTO contacts

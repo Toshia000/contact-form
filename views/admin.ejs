@@ -13,17 +13,18 @@
   <% } %>
 
   <% contacts.forEach(contact => { %>
-    <p>First name: <%= contact["first-name"] %></p>
-    <p>Last name: <%= contact["last-name"] %></p>
-    <p>Job title: <%= contact["job-title"] %></p>
+    <p>ID: <%= contact["id"] %></p>
+    <p>First name: <%= contact["first_name"] %></p>
+    <p>Last name: <%= contact["last_name"] %></p>
+    <p>Job title: <%= contact["job_title"] %></p>
     <p>Company: <%= contact["company"] %></p>
     <p>LinkedIn: <%= contact["linkedin"] %></p>
     <p>Email: <%= contact["email"] %></p>
-    <p>First contact method: <%= contact["first-contact-method"] %></p>
-    <p>Other contact method: <%= contact["other-contact-method"] %></p>
+    <p>First contact method: <%= contact["first_contact_method"] %></p>
+    <p>Other contact method: <%= contact["other_contact_method"] %></p>
     <p>Message: <%= contact["message"] %></p>
-    <p>Mailing list: <%= contact["mailing-list"] %></p>
-    <p>Email format: <%= contact["email-format"] %></p>
+    <p>Mailing list: <%= contact["mailing_list"] %></p>
+    <p>Email format: <%= contact["email_format"] %></p>
     <p>Date and time: <%= contact["timestamp"] %></p>
   <% }); %>
 
